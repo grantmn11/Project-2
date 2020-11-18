@@ -13,5 +13,5 @@ mongoose.connect('mongodb://localhost/users', {
 
 // listener
 db.on('connected', function(){
-    console.log(`Connected to MongoDB on ${db.host}: ${db.port}`)
+    console.log(`Connected to MongoDB on ${db.host}: ${db.port}`);
 })
