@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Fitness Tracker</title>
 </head>
 <body>
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper purple">
+            <a href="/workouts" class="brand-logo left">Home</a>
+            <ul class="right">
+                <a href="/workouts">View Workouts</a>
+                <!-- Place Login UI Here -->
+                <a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a>
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    <header class='container'>
     <h1>Fitness Tracker</h1>
+    </header>
 
     <a href="/workouts">Track Your Fitness Here</a>
 

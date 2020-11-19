@@ -2,19 +2,32 @@
 const express = require('express');
 const port = 3000;
 const morgan = require('morgan')
+const session = require('express-session')
+const passport = require('passport')
 const indexRouter = require('./routes/index')
 const workoutsRouter = require('./routes/workouts')
+
+require('dotenv').config();
 // express app
 const app = express();
 
 // config server
 require('./config/database');
+require('./config/passport');
 
 app.set('view engine', 'ejs');
 // mount middleware
 app.use(morgan('dev'));
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
+app.use(session({
+    secret: process.env.SESSION_SECRET, 
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // mount routes
 app.use('/', indexRouter)

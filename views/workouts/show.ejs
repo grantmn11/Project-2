@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Workout Details</title>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper purple">
+            <a href="" class="brand-logo left">Fitness Tracker</a>
+            <ul class="right">
+                <li><a href="/wokrouts">View Workouts</a></li>
+                <!-- Place Login UI Here -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    <div>
+        <table>
+            <thead>
+                
+                <th>WorkOut Type</th>
+                <th>Intensity Level</th>
+                <th>Date</th>
+            
+            </thead>
+            <tbody>
+            <% workouts.forEach(workout => { %>
+                <tr>
+                    <td><%= workout.workout %></td>
+                    <td><%= workout.intensity %></td>
+                    <td><%= workout.date %></td>
+                    
+                </tr>
+                
+            <% }); %>
+            </tbody>
+        </table>
+   </div>
+</body>
+</html>

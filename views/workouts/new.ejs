@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
     <title>WorkOuts</title>
 </head>
 <body>
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper purple">
+            <a href="" class="brand-logo left">Fitness Tracker</a>
+            <ul class="right">
+                <li><a href="/wokrouts">View Workouts</a></li>
+                <!-- Place Login UI Here -->
+                <a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a>
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>
+            </ul>
+          </div>
+        </nav>
+      </div>
     <h1>WorkOuts</h1>
 
-    <form action="" method="POST">
-        <label>Log Your WorkOuts</label>
-        <select name="workoutSchema">
+    <form action="/workouts/index" method="POST">
+        <label>Log Your Workout Type</label>
+        <select name="workout">
             <option value="walk">Walk</option>
             <option value="run">Run</option>
             <option value="hiit">HIIT</option>
             <option value="weights">Weights</option>
             <option value="bodyweight">BodyWeight</option>
-            <input type="submit" value="Add Workout">
         </select>
-    </form>
+            <label>Intensity</label>
+            <select name="intensity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label>Workout Date and Time</label>
+            <input type='datetime-local' name="date">
+            <input type="submit" value="Add Workout">
+        </form>
 </body>
 </html>

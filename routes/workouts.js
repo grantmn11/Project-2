@@ -4,8 +4,10 @@ const router = express.Router();
 const workoutsCtrl = require('../controllers/workouts');
 
 // mount route
-
-router.get('/', workoutsCtrl.new);
+router.get('/', workoutsCtrl.index)
+router.get('/new', workoutsCtrl.new);
+router.post('/new', workoutsCtrl.create);
+router.get('/:id', workoutsCtrl.show);
 
 
 // export
