@@ -4,6 +4,7 @@ const port = 3000;
 const morgan = require('morgan')
 const session = require('express-session')
 const passport = require('passport')
+const methodOverride = require('method-override')
 const indexRouter = require('./routes/index')
 const workoutsRouter = require('./routes/workouts')
 
@@ -28,6 +29,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 // mount routes
 app.use('/', indexRouter)

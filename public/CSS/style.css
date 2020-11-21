@@ -70,3 +70,9 @@ p {
     color: black;
 }
 
+.delete {
+    display: inline-block;
+    margin: 10px;
+    color: red;
+}
+

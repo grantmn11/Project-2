@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Workouts</title>
 </head>
 <body>
@@ -19,9 +22,13 @@
         <tbody>
         <% workouts.forEach(function(w){ %>
             <tr>
+                
+                </form>
                 <td><%= w.workout %></td>
                 <td><%= w.intensity %></td>
                 <td><%= w.date %></td>
+                <td><form class='delete' action="/workouts/<%= w._id %>?_method=DELETE" method= 'POST'>
+                    <button type= 'submit'>X</button></td>
                 <td><a href="/workouts/<%= w._id %>">Detail</a></td>
             </tr>
             

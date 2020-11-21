@@ -6,7 +6,8 @@ const Workout = require('../models/workout')
     index, 
     new: newWorkout,
     create,
-    show
+    show,
+    delete: deleteWorkout
  }
 
  function index(req, res){
@@ -32,13 +33,21 @@ const Workout = require('../models/workout')
  function show(req, res){
     Workout.findById(req.params.id, function(err, workout){
         //console.log(err);
-        res.render('workouts/show', {workout: workout._id})
+        res.render('workouts/show', { workout })
         
         
       //issue here with workout or workouts?
     });
 }
 
- 
+// edit will take a you to the page and the update will workout find one and update render
+
+ function deleteWorkout(req, res){
+     Workout.findByIdAndDelete(req.params.id, function(err, workout){
+
+        res.redirect('/workouts')
+     });
+     
+ }
 
  
