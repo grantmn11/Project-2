@@ -11,28 +11,34 @@ const Workout = require('../models/workout')
 
  function index(req, res){
      Workout.find({}, function(err, workouts){
-         res.render('workouts/new', { workouts })
+         //console.log(workouts)
+         res.render('workouts/index', { workouts })
      })
  }
 
  function newWorkout(req, res){
-     const newWorkout = new Workout();
-     res.render('workouts/new', { title: 'Add Workout'});
+     res.render('workouts/new');
 
  }
 
  function create(req, res){
-     const workout = new Workout(req.body);
-     workout.save(function(err){
-         console.log(workout);
-         res.redirect('workouts/show')
-     })
- }
+    Workout.create(req.body, function(err, workouts){
+        res.redirect('/workouts')
+    });
+}
+    
+
 
  function show(req, res){
-     Workout.findById(req.params.id, function(err, workout){
-         console.log(workout);
-         res.render('workouts/show', {workout})
-         // issue here with workout or workouts?
-     })
- }
+    Workout.findById(req.params.id, function(err, workout){
+        //console.log(err);
+        res.render('workouts/show', {workout: workout._id})
+        
+        
+      //issue here with workout or workouts?
+    });
+}
+
+ 
+
+ 

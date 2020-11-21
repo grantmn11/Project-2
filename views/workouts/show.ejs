@@ -9,38 +9,32 @@
     <title>Workout Details</title>
 </head>
 <body>
+    <main>
     <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper purple">
             <a href="" class="brand-logo left">Fitness Tracker</a>
             <ul class="right">
-                <li><a href="/wokrouts">View Workouts</a></li>
+                <li><a href="/workouts">View Workouts</a></li>
                 <!-- Place Login UI Here -->
             </ul>
           </div>
         </nav>
       </div>
-    <div>
-        <table>
+    
+       
             <thead>
-                
                 <th>WorkOut Type</th>
                 <th>Intensity Level</th>
                 <th>Date</th>
-            
+                    <p><%= workout.workout %> </p>
+                   <p> <%= workout.intensity %></p>
+                   <p> <%= workout.date %></p>
             </thead>
-            <tbody>
-            <% workouts.forEach(workout => { %>
-                <tr>
-                    <td><%= workout.workout %></td>
-                    <td><%= workout.intensity %></td>
-                    <td><%= workout.date %></td>
-                    
-                </tr>
-                
-            <% }); %>
-            </tbody>
-        </table>
-   </div>
+           
+         
+    
+   
+</main>
 </body>
 </html>

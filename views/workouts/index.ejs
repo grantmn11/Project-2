@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts</title>
+</head>
+<body>
+    <h1 id='head'>Workouts</h1>
+    <form id='new-form'>
+    <table>
+        <thead>
+            
+            <th>Workout</th>
+            <th>Intensity</th>
+            <th>Date</th>
+        
+        </thead>
+        <tbody>
+        <% workouts.forEach(function(w){ %>
+            <tr>
+                <td><%= w.workout %></td>
+                <td><%= w.intensity %></td>
+                <td><%= w.date %></td>
+                <td><a href="/workouts/<%= w._id %>">Detail</a></td>
+            </tr>
+            
+        <% }); %>
+        </tbody>
+    </table>
+    <a href="/">Home</a>
+    <a href="/workouts/new">Add</a>
+</form>
+</body>
+</html>

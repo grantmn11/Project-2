@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/css/style.css" />
     <title>Fitness Tracker</title>
 </head>
 <body>
-    <div class="navbar-fixed">
+    
         <nav>
-          <div class="nav-wrapper purple">
-            <a href="/workouts" class="brand-logo left">Home</a>
-            <ul class="right">
-                <a href="/workouts">View Workouts</a>
+          <div class="nav-wrapper indigo">
+            <a href="/" class="brand-logo left"><i class="medium material-icons">fitness_center</i>Home</a>
+            <ul id= 'nav-mobile' class="right hide-on-med-and-down">
+               <li><a href="/workouts"><i class="medium material-icons">directions_bike</i>View Workouts</a></li>
                 <!-- Place Login UI Here -->
-                <a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a>
-                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>
+                <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
+               <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a></li>
             </ul>
           </div>
         </nav>
-      </div>
-    <header class='container'>
-    <h1>Fitness Tracker</h1>
+        <main>
+      <form id='new-form'>
+    
+    <h1 id='head'>Fitness Tracker</h1>
     </header>
-
-    <a href="/workouts">Track Your Fitness Here</a>
-
+    <div>
+    <a id='lower' href="/workouts">Track Your Fitness Here</a>
+  </div>
+  <div>
+    <a id='lower' href="/workouts/new">Add A Workout</a>
+  </div>
+  </form>
+</main>
 </body>
 </html>

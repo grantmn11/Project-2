@@ -1,5 +1,6 @@
 const passport = require('passport');
-const User = require('../models/workout')
+const User = require('../models/user')
+const Workout = require('../models/workout')
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 passport.use(new GoogleStrategy({
@@ -15,10 +16,12 @@ passport.use(new GoogleStrategy({
             const newUser = new User({
                 name: profile.displayName,
                 email: profile.emails[0].value,
-                googleId: profile.id,
+                googleId: profile.id
+                //avatarURL: profile.getImageURL()
                 // avatar
+                
             });
-
+            
             newUser.save(function(err){
                 if(err) return cb(err);
                 return cb(null, user);

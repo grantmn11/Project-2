@@ -1,12 +1,6 @@
-// require Module
 const mongoose = require('mongoose');
-
 // Shortcut
 const Schema = mongoose.Schema;
-
-// Schema
-
-
 
 const workoutSchema = new Schema({
     workout: {
@@ -35,21 +29,4 @@ const workoutSchema = new Schema({
 
 }, { timestamps: true });
 
-
-
-
-const userSchema = new Schema({
-    name: String,
-    email: String,
-    avatarURL: String,
-    googleId: String,
-    workouts: [workoutSchema]
-    }, { timestamps: true });
-
-
-
-
-
-
-// export Schema Model
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Workout', workoutSchema);

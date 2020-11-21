@@ -11,7 +11,7 @@ router.get('/auth/google', passport.authenticate('google', {
 }));
 // route for after google validation
 router.get('/oauth2callback', passport.authenticate('google', {
-    successRedirect: '/workouts',
+    successRedirect: '/workouts/new',
     failureRedirect: '/'
 
 }));
