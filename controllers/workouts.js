@@ -7,7 +7,9 @@ const Workout = require('../models/workout')
     new: newWorkout,
     create,
     show,
-    delete: deleteWorkout
+    delete: deleteWorkout,
+    edit,
+    update
  }
 
  function index(req, res){
@@ -50,4 +52,17 @@ const Workout = require('../models/workout')
      
  }
 
+ function edit(req, res){
+      workoutId = req.params.id 
+     Workout.findById(req.params.id , function(err, workout){
+         res.render('workouts/edit', {workout})
+     })
+ }
+
+ function update(req, res){
+     Workout.findByIdAndUpdate(req.params.id, req.body, function(err, workout){
+         res.redirect(`/workouts/${req.params.id}`)
+ })
+}
+// edit workoutId 
  

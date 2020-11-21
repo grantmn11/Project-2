@@ -9,6 +9,8 @@ router.get('/new', isLoggedIn, workoutsCtrl.new);
 router.post('/', isLoggedIn, workoutsCtrl.create);
 router.get('/:id', isLoggedIn, workoutsCtrl.show);
 router.delete('/:id', workoutsCtrl.delete);
+router.get('/:id/edit', workoutsCtrl.edit);
+router.put('/:id',  workoutsCtrl.update);
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

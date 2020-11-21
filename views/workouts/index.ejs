@@ -20,16 +20,18 @@
         
         </thead>
         <tbody>
-        <% workouts.forEach(function(w){ %>
+        <% workouts.forEach(function(workout){ %>
             <tr>
                 
                 </form>
-                <td><%= w.workout %></td>
-                <td><%= w.intensity %></td>
-                <td><%= w.date %></td>
-                <td><form class='delete' action="/workouts/<%= w._id %>?_method=DELETE" method= 'POST'>
+                
+                <td><%= workout.workout %></td>
+                <td><%= workout.intensity %></td>
+                <td><%= workout.date %></td>
+                
+                <td><form class='delete' action="/workouts/<%= workout._id %>?_method=DELETE" method= 'POST'>
                     <button type= 'submit'>X</button></td>
-                <td><a href="/workouts/<%= w._id %>">Detail</a></td>
+                <td><a href="/workouts/<%= workout._id %>">Detail</a></td>
             </tr>
             
         <% }); %>
@@ -37,6 +39,9 @@
     </table>
     <a href="/">Home</a>
     <a href="/workouts/new">Add</a>
+    
+    
+   
 </form>
 </body>
 </html>

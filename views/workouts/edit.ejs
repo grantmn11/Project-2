@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <nav>
+            
+              <a href="/" class="brand-logo left"><i class="medium material-icons">fitness_center</i>Home</a>
+              <ul>
+                 <li><a href="/workouts"><i class="medium material-icons">directions_bike</i>View Workouts</a></li>
+                  <!-- Place Login UI Here -->
+                  <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
+                 <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a></li>
+              </ul>
+            </div>
+          </nav>
+    
+        
+    
+         
+        <main>
+            
+        <form id= 'new-form' action="/workouts/<%= workoutId %>?_method=PUT" method="POST">
+            <h3 id='head'>Edit Workout</h3>
+            <label>Workout Type</label>
+            <select name="workout">
+                <option value="Walk">Walk</option>
+                <option value="Run">Run</option>
+                <option value="Hiit">Hiit</option>
+                <option value="Weights">Strength Training</option>
+                <option value="Bodyweight">BodyWeight Exercises</option>
+            </select>
+            <label class= 'label'> Intensity Level
+                <select name="intensity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </label>
+            <label class='label'>Workout Date and Time
+                <input type='datetime-local' name="date">
+            </label>
+                <input type="submit" value="Add Workout">
+            </form>
+            <span>
+                <a href="/workouts/<%= workoutId %>">Cancel</a>
+            </span>
+        </main>
+           
+    
+    
+</body>
+</html>
