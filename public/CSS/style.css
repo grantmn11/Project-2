@@ -1,50 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: auto 0;
+}
 body {
-    background-color: rgb(72, 114, 176)
+    font-family: 'Oswald';
+    background-color: hsl(185, 27%, 58%);
 }
 
 #head {
     font-size: 50px;
-    color: rgb(23, 79, 143)
+    color: #FFFFFF;
 }
 
 #lower {
     font-size: 25px;
-    color: rgb(44, 77, 115)
+    color: #FFFFFF;
+    text-decoration: none;
 
 }
 
-nav {
-    width: 100%;
-    background-color: rgb(148, 155, 150);
+
+.index-landing{
     display: flex;
-    align-items: center
-}
-
-ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    float: right;
-    justify-content: right;
-  }
-
-  ul a:hover{
-      background-color: gray;
-  }
-
-
-main {
-    margin: auto 0;
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    overflow: auto;
-    color: black;
+    flex-direction: column;
     
+
 }
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    background-image: url('/img/background.jpg');
+    background-size: cover;
+    background-position-y: 65%;
+    height: 150px;
+    
+
+}
+
+
+  
+
+  ul{
+      
+      
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+  }
+
+   li {
+    list-style-type: none; 
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+  }
+
+  .login {
+      color: #FFFFFF;
+  }
+
+
+
 
 #new-form {
     display: flex;
@@ -63,7 +92,7 @@ main {
 }
 
 table, th, td {
-    border: 1px solid rgb(44, 77, 115)
+    border: 1px solid rgb(44, 77, 115);
 }
 
 p {
@@ -75,4 +104,23 @@ p {
     margin: 10px;
     color: red;
 }
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-image: url('/img/footer.jpg');
+    background-position-y: 74%;
+    background-size: cover;
+}
+
+
+
+
+
 

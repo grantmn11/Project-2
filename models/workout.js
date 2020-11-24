@@ -20,7 +20,11 @@ const workoutSchema = new Schema({
             const year = date.getFullYear();
             return date;
         
-        }
+        },
+        userIds: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        }]
     }
 
     // use the enum for the work out types in enum use walk run hiit etc

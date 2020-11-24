@@ -3,20 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <link rel="stylesheet" href="/css/style.css" />
     <title>Workouts</title>
 </head>
 <body>
+    <nav class="nav">
+
+        <ul>
+          <li>
+            <a href="/"><i class="fas fa-dumbbell"></i>Home</a>
+          </li>
+    
+    
+          <li>
+            <a href="/workouts"><i class="fas fa-biking"></i>View Workouts</a>
+          </li>
+          <!-- Place Login UI Here -->
+    
+    
+          <li class='login'>
+            <a href="/logout">
+              <i class="fas fa-sign-out-alt"></i>
+            </a>
+            <a href="/auth/google">
+              <i class="fas fa-sign-in-alt"></i>
+            </a>
+          </li>
+    
+    
+        </ul>
+      </nav>
     <h1 id='head'>Workouts</h1>
     <form id='new-form'>
     <table>
         <thead>
-            
+            <th>User</th>
             <th>Workout</th>
             <th>Intensity</th>
             <th>Date</th>
+            
+
         
         </thead>
         <tbody>
@@ -24,7 +51,7 @@
             <tr>
                 
                 </form>
-                
+                <td><%= user.name %></td>
                 <td><%= workout.workout %></td>
                 <td><%= workout.intensity %></td>
                 <td><%= workout.date %></td>

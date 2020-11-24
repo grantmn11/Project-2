@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Fitness Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Fitness Tracker</title>
 </head>
+
 <body>
-    
-        <nav>
-          <div class="nav-wrapper indigo">
-            <a href="/" class="brand-logo left"><i class="medium material-icons">fitness_center</i>Home</a>
-            <ul id= 'nav-mobile' class="right hide-on-med-and-down">
-               <li><a href="/workouts"><i class="medium material-icons">directions_bike</i>View Workouts</a></li>
-                <!-- Place Login UI Here -->
-                <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
-               <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a></li>
-            </ul>
-          </div>
-        </nav>
-        <main>
-      <form id='new-form'>
-    
+
+
+  <nav class="nav">
+
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+
+
+      <li>
+        <a href="/workouts">View Workouts</a>
+      </li>
+      <!-- Place Login UI Here -->
+
+
+      <li>
+        <a href="/logout">Logout</a>
+        <a href="/auth/google">Login</a>
+      </li>
+
+
+    </ul>
+  </nav>
+  <main class="index-landing">
+
+
+
     <h1 id='head'>Fitness Tracker</h1>
-    </header>
+
     <div>
-    <a id='lower' href="/workouts">Track Your Fitness Here</a>
-  </div>
-  <div>
-    <a id='lower' href="/workouts/new">Add A Workout</a>
-  </div>
-  </form>
-</main>
+      <a id='lower' href="/workouts">Track Your Fitness Here</a>
+    </div>
+    <div>
+      <a id='lower' href="/workouts/new">Add A Workout</a>
+    </div>
+
+  </main>
+  <footer>
+
+    <p>Copyright &copy; Grant Ferreira
+    </p>
+
+
+  </footer>
+
+
 </body>
+
 </html>

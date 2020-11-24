@@ -7,6 +7,7 @@ const passport = require('passport')
 const methodOverride = require('method-override')
 const indexRouter = require('./routes/index')
 const workoutsRouter = require('./routes/workouts')
+const usersRouter = require('./routes/users')
 
 require('dotenv').config();
 // express app
@@ -34,6 +35,7 @@ app.use(methodOverride('_method'));
 // mount routes
 app.use('/', indexRouter)
 app.use('/workouts', workoutsRouter);
+app.use('/', usersRouter);
 // tells the app to listen
 app.listen(port, function(){
     console.log(`Express is listening on port: ${port}`)

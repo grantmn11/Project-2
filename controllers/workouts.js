@@ -1,5 +1,6 @@
 // require model
 const Workout = require('../models/workout')
+const User = require('../models/user')
 
 // export
  module.exports = {
@@ -15,7 +16,9 @@ const Workout = require('../models/workout')
  function index(req, res){
      Workout.find({}, function(err, workouts){
          //console.log(workouts)
-         res.render('workouts/index', { workouts })
+         res.render('workouts/index', { workouts, 
+         user: req.user
+        })
      })
  }
 
@@ -25,8 +28,13 @@ const Workout = require('../models/workout')
  }
 
  function create(req, res){
-    Workout.create(req.body, function(err, workouts){
-        res.redirect('/workouts')
+    Workout.create(req.params.id, req.body, function(err, workouts){
+        //const User = req.user.workout.id(req.params.id)
+        //user.workoutId.push(user._id)
+        req.user.save(function(err){
+            res.redirect('/workouts')
+        })
+        
     });
 }
     
@@ -35,7 +43,11 @@ const Workout = require('../models/workout')
  function show(req, res){
     Workout.findById(req.params.id, function(err, workout){
         //console.log(err);
-        res.render('workouts/show', { workout })
+        User.find({workout: workouts._id},
+            function(err, users){
+                res.render('workouts/show', { workout, users })
+            })
+        
         
         
       //issue here with workout or workouts?
