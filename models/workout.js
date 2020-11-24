@@ -21,7 +21,7 @@ const workoutSchema = new Schema({
             return date;
         
         },
-        userIds: [{
+        userId: [{
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         }]

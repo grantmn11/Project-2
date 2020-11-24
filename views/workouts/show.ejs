@@ -1,64 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Workout Details</title>
-</head>
-<body>
-    <main>
-        <nav class="nav">
-
-            <ul>
-              <li>
-                <a href="/"><i class="fas fa-dumbbell"></i>Home</a>
-              </li>
-        
-        
-              <li>
-                <a href="/workouts"><i class="fas fa-biking"></i>View Workouts</a>
-              </li>
-              <!-- Place Login UI Here -->
-        
-        
-              <li class='login'>
-                <a href="/logout">
-                  <i class="fas fa-sign-out-alt"></i>
-                </a>
-                <a href="/auth/google">
-                  <i class="fas fa-sign-in-alt"></i>
-                </a>
-              </li>
-        
-        
-            </ul>
-          </nav>
-      
-    
+<%- include('../partials/header') -%>
        
-            <thead>
-                <th>User</th>
-                <th>WorkOut Type</th>
-                <th>Intensity Level</th>
-                <th>Date</th>
-                    <p><%= user.name %></p>
-                    <p><%= workout.workout %> </p>
-                   <p> <%= workout.intensity %></p>
-                   <p> <%= workout.date %></p>
-            </thead>
+  <main>
+    <thead>
+        <th>User</th>
+        <th>WorkOut Type</th>
+        <th>Intensity Level</th>
+        <th>Date</th>
+            <p><%= user.name %></p>
+            <p><%= workout.workout %> </p>
+           <p> <%= workout.intensity %></p>
+           <p> <%= workout.date.toLocaleDateString() %></p>
+    </thead>
 
-            <a href="/workouts/<%= workout._id %>/edit">
-                <input type="button" value='Edit Workout'>
-            </a>
+    <a href="/workouts/<%= workout._id %>/edit">
+        <input type="button" value='Edit Workout'>
+    </a>
+
+  </main>     
            
-            
-            
-         
-    
-   
-</main>
-</body>
-</html>
+  <%- include('../partials/footer') -%>

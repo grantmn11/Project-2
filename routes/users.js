@@ -3,10 +3,10 @@ const express = require('express');
 const router = express.Router();
 const usersCtrl = require('../controllers/users')
 
-router.get('/', isLoggedIn, usersCtrl.index)
+router.get('/workouts', usersCtrl.index)
 //router.get('/users/:id', isLoggedIn, usersCtrl.show)
 
-//router.post('/workouts', isLoggedIn, usersCtrl.addWorkout)
+router.post('/workouts',  usersCtrl.addWorkout)
 
 
 

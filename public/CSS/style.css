@@ -1,79 +1,93 @@
+:root {
+    --font-heading: 'Play', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
 * {
     box-sizing: border-box;
-    margin: auto 0;
+    margin: 0;
 }
+
 body {
-    font-family: 'Oswald';
-    background-color: hsl(185, 27%, 58%);
+    background: linear-gradient(60deg , #030f58, #071da8, #77acb1, #77acb1);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+    @keyframes gradient {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+.menu {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 #head {
-    font-size: 50px;
+    font-family: var(--font-heading);
+    font-size: 60px;
     color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgb(44, 77, 115);
 }
 
 #lower {
+    font-family: var(--font-body);
     font-size: 25px;
     color: #FFFFFF;
     text-decoration: none;
-
 }
 
-
-.index-landing{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-
+    min-height: 100vh;
 }
 
-.nav {
+nav {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     position: relative;
     background-image: url('/img/background.jpg');
     background-size: cover;
     background-position-y: 65%;
     height: 150px;
-    
-
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
 
-  
-
-  ul{
-      
-      
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      flex-direction: row;
-      align-items: center;
-  }
-
-   li {
-    list-style-type: none; 
-    display: inline-block;
-    text-align: left;
-    padding: 0;
+ul li {
+    list-style-type: none;
     margin-right: 15px;
+    font-family: var(--font-heading);
     font-size: 20px;
-    color: #FFFFFF;
-    text-decoration: none;
-    
-  }
+    padding: 8px;
+}
 
-  .login {
-      color: #FFFFFF;
-  }
+ul li:hover {
+    background: #77acb1;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+}
 
-
-
+.index-div {
+    padding: 10px;
+}
 
 #new-form {
     display: flex;
@@ -84,19 +98,18 @@ body {
     padding: 40px;
     background: rgba(173, 121, 61);
     box-shadow: 1px 1px 15px 1px rgb(36, 80, 145);
-    
+
 }
+
 #new-form * {
     padding: 5px;
     border-radius: 5px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid rgb(44, 77, 115);
-}
-
-p {
-    color: black;
 }
 
 .delete {
@@ -107,7 +120,7 @@ p {
 
 footer {
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -119,8 +132,9 @@ footer {
     background-size: cover;
 }
 
-
-
-
-
-
+p {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: #77acb1;
+    text-shadow: 0px 1px 1px rgb(44, 77, 115);
+}

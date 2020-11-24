@@ -1,74 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Workouts</title>
-</head>
-<body>
-    <nav class="nav">
+<%- include('../partials/header') -%>
+<main>
+<h1 id='head'>Workouts</h1>
+<form id='new-form'>
+  <table>
+    <thead>
+      <th>User</th>
+      <th>Workout</th>
+      <th>Intensity</th>
+      <th>Date</th>
 
-        <ul>
-          <li>
-            <a href="/"><i class="fas fa-dumbbell"></i>Home</a>
-          </li>
-    
-    
-          <li>
-            <a href="/workouts"><i class="fas fa-biking"></i>View Workouts</a>
-          </li>
-          <!-- Place Login UI Here -->
-    
-    
-          <li class='login'>
-            <a href="/logout">
-              <i class="fas fa-sign-out-alt"></i>
-            </a>
-            <a href="/auth/google">
-              <i class="fas fa-sign-in-alt"></i>
-            </a>
-          </li>
-    
-    
-        </ul>
-      </nav>
-    <h1 id='head'>Workouts</h1>
-    <form id='new-form'>
-    <table>
-        <thead>
-            <th>User</th>
-            <th>Workout</th>
-            <th>Intensity</th>
-            <th>Date</th>
-            
 
-        
-        </thead>
-        <tbody>
-        <% workouts.forEach(function(workout){ %>
-            <tr>
-                
-                </form>
-                <td><%= user.name %></td>
-                <td><%= workout.workout %></td>
-                <td><%= workout.intensity %></td>
-                <td><%= workout.date %></td>
-                
-                <td><form class='delete' action="/workouts/<%= workout._id %>?_method=DELETE" method= 'POST'>
-                    <button type= 'submit'>X</button></td>
-                <td><a href="/workouts/<%= workout._id %>">Detail</a></td>
-            </tr>
-            
-        <% }); %>
-        </tbody>
-    </table>
-    <a href="/">Home</a>
-    <a href="/workouts/new">Add</a>
-    
-    
-   
+
+    </thead>
+    <tbody>
+      <% workouts.forEach(function(workout){ %>
+      <tr>
+
 </form>
-</body>
-</html>
+<td><%= user.name %></td>
+<td><%= workout.workout %></td>
+<td><%= workout.intensity %></td>
+<td><%= workout.date.toLocaleDateString() %></td>
+
+<td>
+  <form class='delete' action="/workouts/<%= workout._id %>?_method=DELETE" method='POST'>
+    <button type='submit'>X</button>
+</td>
+<td><a href="/workouts/<%= workout._id %>">Detail</a></td>
+</tr>
+
+<% }); %>
+</tbody>
+</table>
+<a href="/">Home</a>
+<a href="/workouts/new">Add</a>
+</form>
+</main>
+
+<%- include('../partials/footer') -%>

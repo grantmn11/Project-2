@@ -1,20 +1,29 @@
 
 const User = require('../models/user')
-const Workout = require('../models/workout')
+
 
 module.exports = {
     index,
+    addWorkout
+
     
 }
 
 function index(req, res){
         User.find({}, function(err, users) {
-          res.render('users/index', { 
+          res.render('workouts/index', { 
             users,
           user: req.user
          });
         });
       
+}
+
+function addWorkout(req, res){
+    req.user.workout.push(req.body);
+    req.user.workout.save(function(err){
+      res.redirect('/workouts');
+    })
 }
 
 

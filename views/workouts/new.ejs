@@ -1,74 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partials/header') -%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<main>
 
-
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>WorkOuts</title>
-</head>
-
-<body>
-    <nav class='nav'>
-
-        <ul>
-            <li>
-                <a href="/"><i class="fas fa-dumbbell"></i>Home</a>
-            </li>
-
-
-            <li>
-                <a href="/workouts"><i class="fas fa-biking"></i>View Workouts</a>
-            </li>
-            <!-- Place Login UI Here -->
-
-
-            <li class='login'>
-                <a href="/logout">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a>
-                <a href="/auth/google">
-                    <i class="fas fa-sign-in-alt"></i>
-                </a>
-            </li>
-
-
-        </ul>
-    </nav>
-
-
-
-
-    <main>
-
-        <form id='new-form' action="/workouts" method="POST">
-            <h3 id='head'>Log Workouts</h3>
-            <label>Workout Type</label>
-            <select name="workout">
-                <option value="Walk">Walk</option>
-                <option value="Run">Run</option>
-                <option value="HIIT">HIIT</option>
-                <option value="Weights">Weights</option>
-                <option value="BodyWeight">BodyWeight</option>
+    <form id='new-form' action="/workouts" method="POST">
+        <h3 id='head'>Log Workouts</h3>
+        <label>Workout Type</label>
+        <select name="workout">
+            <option value="Walk">Walk</option>
+            <option value="Run">Run</option>
+            <option value="HIIT">HIIT</option>
+            <option value="Weights">Weights</option>
+            <option value="BodyWeight">BodyWeight</option>
+        </select>
+        <label class='label'> Intensity Level
+            <select name="intensity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
-            <label class='label'> Intensity Level
-                <select name="intensity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </label>
-            <label class='label'>Workout Date and Time
-                <input type='datetime-local' name="date">
-            </label>
-            <input type="submit" value="Add Workout">
-        </form>
-    </main>
+        </label>
+        <label class='label'>Workout Date and Time
+            <input type='datetime-local' name="date">
+        </label>
+        <input type="submit" value="Add Workout">
+    </form>
+</main>
 
-</body>
-
-</html>
+<%- include('../partials/footer') -%>
