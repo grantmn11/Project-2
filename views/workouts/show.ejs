@@ -1,21 +1,42 @@
 <%- include('../partials/header') -%>
-       
-  <main>
-    <thead>
+
+<main>
+  <form id='new-form'>
+    <table>
+      <h1 id="head">Change Workout Details</h1>
+      <thead>
+
         <th>User</th>
         <th>WorkOut Type</th>
         <th>Intensity Level</th>
         <th>Date</th>
-            <p><%= user.name %></p>
-            <p><%= workout.workout %> </p>
-           <p> <%= workout.intensity %></p>
-           <p> <%= workout.date.toLocaleDateString() %></p>
+  </form>
+  <tbody>
+    <tr>
+      <td> <%= user.name %> </td>
+      <td> <%= workout.workout %> </td>
+      <td> <%= workout.intensity %> </td>
+      <td> <%= workout.date.toLocaleDateString() %> </td>
+    </tr>
     </thead>
 
-    <a href="/workouts/<%= workout._id %>/edit">
-        <input type="button" value='Edit Workout'>
+  </tbody>
+  </table>
+  <ul>
+    <li>
+      <a href="/workouts/<%= workout._id %>/edit">
+        <input class="btn" type="button" value='Edit Workout'>
+        
+    </li>
     </a>
+    <li>
+      <a href="/workouts">
+        <input  class="btn" type="button" value="See New Workout">
+      </a>
+    </li>
+  </ul>
 
-  </main>     
-           
-  <%- include('../partials/footer') -%>
+
+</main>
+
+<%- include('../partials/footer') -%>

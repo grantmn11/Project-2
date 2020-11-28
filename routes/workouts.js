@@ -4,7 +4,7 @@ const router = express.Router();
 const workoutsCtrl = require('../controllers/workouts');
 
 // mount route
-router.get('/', workoutsCtrl.index)
+router.get('/', isLoggedIn, workoutsCtrl.index)
 router.get('/new', isLoggedIn, workoutsCtrl.new);
 router.post('/', isLoggedIn, workoutsCtrl.create);
 router.get('/:id', isLoggedIn, workoutsCtrl.show);

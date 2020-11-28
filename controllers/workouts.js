@@ -32,7 +32,8 @@ function newWorkout(req, res) {
 }
 
 function create(req, res) {
-    Workout.create(req.params.id, req.body, function (err, workouts) {
+    Workout.create(req.body, function (err, workouts) {
+        //deleted req.body after req.params.id
         //const User = req.user.workout.id(req.params.id)
         //user.workoutId.push(user._id)
         req.user.save(function (err) {

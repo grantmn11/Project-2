@@ -13,6 +13,7 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
+  /*
     @keyframes gradient {
 0% {
     background-position: 0% 50%;
@@ -25,6 +26,14 @@ body {
 }
 }
 
+*/
+
+
+
+
+
+
+
 .menu {
     color: #FFFFFF;
     text-decoration: none;
@@ -32,7 +41,7 @@ body {
 
 #head {
     font-family: var(--font-heading);
-    font-size: 60px;
+    font-size: 75px;
     color: #FFFFFF;
     text-shadow: 2px 2px 5px rgb(44, 77, 115);
 }
@@ -94,10 +103,11 @@ ul li:hover {
     justify-content: center;
     flex-direction: column;
     grid-gap: 10px;
-    border: 3px solid #FFFFFF;
+    border: 4px solid #77acb1;
     padding: 40px;
-    background: rgba(173, 121, 61);
+    background: #d6d5d4 ;
     box-shadow: 1px 1px 15px 1px rgb(36, 80, 145);
+    font-family: var(--font-body);
 
 }
 
@@ -117,6 +127,61 @@ td {
     margin: 10px;
     color: red;
 }
+
+
+
+.btn {
+    
+        background-color: #FFFFFF;
+        font-family: var(--font-heading);
+        color: #071da8;
+        padding: 22px;
+        font-size: 16px;
+        border: none;
+        border-radius: 12px;
+        border: 1px solid black; 
+      
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+  }
+
+  .drop-content {
+    
+        display: none;
+        position: absolute;
+        background-color: rgb(75, 70, 70);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      
+  }
+
+  .drop-content a {
+    
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      
+  }
+
+  .drop-content a:hover {
+      background-color: #77acb1; 
+    }
+
+    
+    .drop:hover .drop-content {
+            display: block;
+        }
+
+    .drop:hover .button {
+        background-color: #3e8e41;
+    }
+
+
 
 footer {
     display: flex;
@@ -138,3 +203,19 @@ p {
     color: #77acb1;
     text-shadow: 0px 1px 1px rgb(44, 77, 115);
 }
+
+.detail {
+    font-family: var(--font-body);
+    font-size: 20px;
+    color: #071da8;
+    text-shadow: 0px 1px 1px rgb(44, 77, 115);
+}
+
+.edit {
+    font-size: 14px;
+    color: #071da8;
+    text-shadow: 0px 1px 1px rgb(44, 77, 115);
+
+}
+
+
