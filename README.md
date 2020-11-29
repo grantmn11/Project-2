@@ -26,4 +26,4 @@ Log your workouts and track your fitness. Use our free resources to improve your
 
 ## How to Add a WorkOut
 
-![](Add-Workout.gif)
+![](Add Workout.gif)
