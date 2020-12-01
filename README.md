@@ -19,7 +19,9 @@ Log your workouts and track your fitness. Use our free resources to improve your
 
  ![Board](https://user-images.githubusercontent.com/69698724/100534530-c5fd6080-31c4-11eb-97ba-1a9155ef5269.png)
 
+ ## Project Site
  
+ https://fitness-tracker-1985.herokuapp.com/workouts
 
  ### Future Goals
 
