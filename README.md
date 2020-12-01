@@ -21,7 +21,7 @@ Log your workouts and track your fitness. Use our free resources to improve your
 
  ## Project Site
  
- https://fitness-tracker-1985.herokuapp.com/workouts
+ https://fitness-tracker-1985.herokuapp.com/
 
  ### Future Goals
 
