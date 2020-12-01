@@ -8,6 +8,7 @@ Log your workouts and track your fitness. Use our free resources to improve your
 
  - HTML
  - CSS
+ - JavaScript
  - Mongoose
  - MongoDB
  - OAuth
